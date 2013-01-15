@@ -4,6 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Gameswap" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Gameswap" %>">
+    <!-- google web font addition -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/font-awesome.css">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>

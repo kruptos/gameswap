@@ -12,6 +12,20 @@
  *= require_tree .
 */
 
+a.brand, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', Georgia, Times, serif;
+}
+ 
+p, div {
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+body {
+	background: url(/img/pw_maze_white.png) repeat 0 0;
+} 
+
+
+
 .content {
   background-color: #eee;
   padding: 20px;
