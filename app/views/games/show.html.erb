@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @game.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @game.description %>
+</p>
+
+<p>
+  <b>Giantbomb:</b>
+  <%= @game.giantbomb_id %>
+</p>
+
+<p>
+  <b>Thumbnail url:</b>
+  <%= @game.thumbnail_url %>
+</p>
+
+<p>
+  <b>Platform:</b>
+  <%= @game.platform %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

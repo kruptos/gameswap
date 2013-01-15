@@ -11,7 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113235944) do
+ActiveRecord::Schema.define(:version => 20130115211934) do
+
+  create_table "games", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "giantbomb_id"
+    t.string   "thumbnail_url"
+    t.string   "platform"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "games", ["giantbomb_id"], :name => "index_games_on_giantbomb_id"
+
+  create_table "line_items", :force => true do |t|
+    t.integer  "locker_id"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "line_items", ["game_id"], :name => "index_line_items_on_game_id"
+  add_index "line_items", ["locker_id"], :name => "index_line_items_on_locker_id"
+
+  create_table "lockers", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "lockers", ["user_id"], :name => "index_lockers_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
