@@ -11,5 +11,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   has_one :locker
+
+
+  protected
+
   
 end
